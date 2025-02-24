@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Site</title>
+    <title>Park Loop Ventures | Small Business Acquisition</title>
     <style>
         * {
             margin: 0;
@@ -15,82 +15,164 @@
         body {
             line-height: 1.6;
             color: #333;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f766e; /* Teal 700 */
         }
 
         .hero {
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(120deg, #0d9488, #0891b2); /* Teal 600 to Cyan 600 */
             color: white;
-            padding: 4rem 2rem;
+            padding: 6rem 0;
             text-align: center;
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: white;
-            color: #6366f1;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: transform 0.2s;
+        section {
+            padding: 5rem 0;
+            background: white;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
+        section:nth-child(even) {
+            background: #f9fafb;
         }
 
-        .features {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .features h2 {
+        .section-title {
             text-align: center;
             margin-bottom: 3rem;
+            color: #0f766e; /* Teal 700 */
+            font-size: 2rem;
         }
 
-        .feature-grid {
+        .criteria-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .feature-card {
-            padding: 1.5rem;
-            border-radius: 10px;
+        .criteria-box {
             background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #0d9488; /* Teal 600 */
         }
 
-        .feature-card h3 {
+        .criteria-box h3 {
+            color: #0f766e; /* Teal 700 */
             margin-bottom: 1rem;
-            color: #6366f1;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #0d9488; /* Teal 600 */
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #e0f2fe; /* Sky 100 */
+        }
+
+        .team-member h3 {
+            color: #0f766e; /* Teal 700 */
+            margin-bottom: 0.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            color: #0369a1; /* Sky 700 */
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
         }
 
         footer {
+            background: #0f172a; /* Slate 900 */
+            color: white;
+            padding: 3rem 0;
             text-align: center;
-            padding: 2rem;
-            background: #f9fafb;
-            margin-top: 2rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
+            .criteria-container,
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -102,32 +184,94 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Park Loop Ventures</div>
+        </div>
+    </header>
+
     <section class="hero">
-        <h1>Welcome to My Site</h1>
-        <p>A powerful solution for your needs</p>
-        <a href="#contact" class="cta-button">Get Started</a>
+        <div class="container">
+            <h1>Park Loop Ventures</h1>
+            <p>We're an investment company focused on acquiring, owning, and operating exceptional small businesses for the long term.</p>
+        </div>
     </section>
 
-    <section class="features">
-        <h2>What We Offer</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Feature 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+    <section id="criteria">
+        <div class="container">
+            <h2 class="section-title">Acquisition Criteria</h2>
+            <div class="criteria-container">
+                <div class="criteria-box">
+                    <h3>Target Location</h3>
+                    <ul>
+                        <li>California</li>
+                        <li>Nevada</li>
+                        <li>Arizona</li>
+                        <li>Utah</li>
+                    </ul>
+                </div>
+                <div class="criteria-box">
+                    <h3>Financials</h3>
+                    <ul>
+                        <li>$750k-$2M EBITDA</li>
+                        <li>$2-10M revenue</li>
+                        <li>>10 years operating history</li>
+                        <li>Recurring customer base</li>
+                    </ul>
+                </div>
+                <div class="criteria-box">
+                    <h3>Owner Situation</h3>
+                    <ul>
+                        <li>Retiring</li>
+                        <li>Transitioning from day-to-day</li>
+                    </ul>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>Feature 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+    </section>
+
+    <section id="why">
+        <div class="container">
+            <h2 class="section-title">Why Work With Us</h2>
+            <div class="criteria-container">
+                <div class="criteria-box">
+                    <h3>Experienced Operators</h3>
+                    <p>Combined over 25 years of operating experience in companies of different sizes and scopes. Extensive customer-facing experience, sales, operations, and product management experience.</p>
+                </div>
+                <div class="criteria-box">
+                    <h3>Family Focus & Long-Term Vision</h3>
+                    <p>Looking for something we can own and operate for the long haul. We build for sustainability and future generations.</p>
+                </div>
+                <div class="criteria-box">
+                    <h3>Passionate Leadership</h3>
+                    <p>Passionate about building and managing high performing teams, having a positive impact on customers and employees, building for sustainability, and creating value for all stakeholders.</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>Feature 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Kent Holland">
+                    <h3>Kent Holland</h3>
+                    <a href="https://www.linkedin.com/in/kentwholland/" class="social-link" target="_blank">View LinkedIn Profile</a>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Rachel Maddux">
+                    <h3>Rachel Maddux</h3>
+                    <a href="https://www.linkedin.com/in/rachelemaddux/" class="social-link" target="_blank">View LinkedIn Profile</a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Park Loop Ventures. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
