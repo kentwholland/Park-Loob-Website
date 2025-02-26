@@ -100,93 +100,91 @@
             margin-bottom: 1rem;
         }
 
-        section {
+        .contact-section {
             padding: 5rem 0;
             background: white;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .contact-info h2 {
+        .contact-heading {
+            text-align: center;
             color: #0f766e;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .contact-card {
             background: #f1f5f9;
             padding: 2rem;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         .contact-card h3 {
             color: #0f766e;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #0d9488;
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-info {
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
         }
 
-        .contact-card p {
-            margin-bottom: 0.5rem;
+        .contact-label {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #334155;
         }
 
-        .contact-card a {
+        .contact-value {
+            margin-bottom: 1rem;
+        }
+
+        .contact-value a {
             color: #0369a1;
             text-decoration: none;
+            word-break: break-all;
         }
 
-        .contact-card a:hover {
+        .contact-value a:hover {
             text-decoration: underline;
         }
 
-        .contact-form h2 {
+        .general-contact {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f1f5f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .general-contact h3 {
             color: #0f766e;
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
             margin-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
 
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
+        .general-contact a {
+            color: #0369a1;
+            text-decoration: none;
+            font-size: 1.25rem;
             font-weight: 500;
         }
 
-        input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: #0f766e;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #0d9488;
+        .general-contact a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -202,7 +200,7 @@
         }
 
         @media (max-width: 768px) {
-            .contact-grid {
+            .contact-cards {
                 grid-template-columns: 1fr;
             }
             
@@ -246,64 +244,63 @@
     <div class="page-header">
         <div class="container">
             <h1>Contact Us</h1>
-            <p>Let's discuss your business and explore opportunities together</p>
+            <p>We'd love to hear from you</p>
         </div>
     </div>
 
-    <section>
-        <div class="container contact-grid">
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <div class="contact-card">
-                    <h3>Email</h3>
-                    <p><a href="mailto:info@parkloopventures.com">info@parkloopventures.com</a></p>
-                </div>
-                <div class="contact-card">
-                    <h3>Phone</h3>
-                    <p><a href="tel:+1123456789">(123) 456-789</a></p>
-                </div>
-                <div class="contact-card">
-                    <h3>Connect</h3>
-                    <p><a href="https://www.linkedin.com/in/kentwholland/" target="_blank">Kent Holland - LinkedIn</a></p>
-                    <p><a href="https://www.linkedin.com/in/rachelemaddux/" target="_blank">Rachel Maddux - LinkedIn</a></p>
-                </div>
+    <section class="contact-section">
+        <div class="container contact-container">
+            <div class="general-contact">
+                <h3>General Inquiries</h3>
+                <a href="mailto:info@parkloopventures.com">info@parkloopventures.com</a>
             </div>
             
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
+            <h2 class="contact-heading">Get in Touch Directly</h2>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <h3>Kent Holland</h3>
+                    <div class="contact-info">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:kent@parkloopventures.com">kent@parkloopventures.com</a>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="contact-info">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">
+                            <a href="tel:+19253240667">(925) 324-0667</a>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company">
+                    <div class="contact-info">
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">
+                            <a href="https://www.linkedin.com/in/kentwholland/" target="_blank">View Profile</a>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="interest">I'm interested in:</label>
-                        <select id="interest" name="interest">
-                            <option value="selling">Selling my business</option>
-                            <option value="discussing">Discussing acquisition opportunities</option>
-                            <option value="learning">Learning more about Park Loop Ventures</option>
-                            <option value="other">Other</option>
-                        </select>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Rachel Maddux</h3>
+                    <div class="contact-info">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:rachel@parkloopventures.com">rachel@parkloopventures.com</a>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                    <div class="contact-info">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">
+                            <a href="tel:+13148004109">(314) 800-4109</a>
+                        </div>
                     </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                    <div class="contact-info">
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">
+                            <a href="https://www.linkedin.com/in/rachelemaddux/" target="_blank">View Profile</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -318,14 +315,6 @@
         // Mobile menu toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             document.getElementById('navMenu').classList.toggle('active');
-        });
-        
-        // For a real implementation, you'd need to handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // In a real implementation, you would send the form data to your server
-            alert('Thank you for your message. We will get back to you soon!');
-            this.reset();
         });
     </script>
 </body>
