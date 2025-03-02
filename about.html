@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+.team-member h3 {
+            color: #0f766e;
+            margin-bottom: 0.5rem;
+        }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -149,46 +152,36 @@
         }
 
         .team-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
         }
 
         .team-member {
-            background: white;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .team-member img {
+            width: 250px;
+            height: 250px;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .team-member-image {
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .team-member-image img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .team-member-content {
-            padding: 2rem;
-        }
-
-        .team-member-content h3 {
-            color: #0f766e;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-member-content .role {
+        .team-member .role {
             color: #64748b;
             margin-bottom: 1.5rem;
             font-size: 0.9rem;
         }
 
-        .team-member-content p {
+        .team-member p {
             margin-bottom: 1.5rem;
+            text-align: left;
         }
 
         .social-link {
@@ -302,27 +295,19 @@
             <h2 class="section-title">Meet Our Husband-Wife Team</h2>
             <div class="team-container">
                 <div class="team-member">
-                    <div class="team-member-image">
-                        <img src="images/kent_headshot.jpeg" alt="Kent Holland">
-                    </div>
-                    <div class="team-member-content">
-                        <h3>Kent Holland</h3>
-                        <div class="role">Co-Founder & Managing Partner</div>
-                        <p>Kent brings extensive operating experience across technology businesses. His background includes building and scaling customer-facing teams across Sales, Customer Success, and Marketing, as well as running business operations, financial planning and analysis, and consulting across a variety of industries.</p>
-                        <a href="https://www.linkedin.com/in/kentwholland/" class="social-link" target="_blank">View LinkedIn Profile</a>
-                    </div>
+                    <img src="images/kent-holland.jpg" alt="Kent Holland">
+                    <h3>Kent Holland</h3>
+                    <div class="role">Co-Founder & Managing Partner</div>
+                    <p>Kent brings extensive operating experience across technology businesses. His background includes building and scaling customer-facing teams across Sales, Customer Success, and Marketing, as well as running business operations, financial planning and analysis, and consulting across a variety of industries.</p>
+                    <a href="https://www.linkedin.com/in/kentwholland/" class="social-link" target="_blank">View LinkedIn Profile</a>
                 </div>
                 
                 <div class="team-member">
-                    <div class="team-member-image">
-                        <img src="/api/placeholder/600/600" alt="Rachel Maddux">
-                    </div>
-                    <div class="team-member-content">
-                        <h3>Rachel Maddux</h3>
-                        <div class="role">Co-Founder & Managing Partner</div>
-                        <p>Rachel's expertise as a product leader includes significant experience at Uber and currently leading product for a fintech startup. She also has a background in economic consulting, working with Fortune 100 firms across various industries, bringing analytical rigor and strategic thinking to business operations.</p>
-                        <a href="https://www.linkedin.com/in/rachelemaddux/" class="social-link" target="_blank">View LinkedIn Profile</a>
-                    </div>
+                    <img src="images/rachel-maddux.jpg" alt="Rachel Maddux">
+                    <h3>Rachel Maddux</h3>
+                    <div class="role">Co-Founder & Managing Partner</div>
+                    <p>Rachel's expertise as a product leader includes significant experience at Uber and currently leading product for a fintech startup. She also has a background in economic consulting, working with Fortune 100 firms across various industries, bringing analytical rigor and strategic thinking to business operations.</p>
+                    <a href="https://www.linkedin.com/in/rachelemaddux/" class="social-link" target="_blank">View LinkedIn Profile</a>
                 </div>
             </div>
         </div>
